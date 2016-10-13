@@ -11,9 +11,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+
     protected $fillable = [
         'role_id', 'is_active', 'name', 'email', 'password', 'photo_id'
     ];
+
+//    protected $placeholder = "/images/placeholder.jpg";
 
     /**
      * The attributes that should be hidden for arrays.
@@ -33,4 +36,11 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Photo');
     }
+
+//    public function getPhoto_idAttribute ($photo)
+//    {
+//        if ($photo == "") {
+//            return $this->placeholder;
+//        }
+//    }
 }
