@@ -3,6 +3,19 @@
 @section('content')
 
     <h1>Users</h1>
+
+    @if(Session::has('user_created'))
+        <p class="bg-success">{{session('user_created')}}</p>
+    @endif
+
+    @if(Session::has('user_updated'))
+        <p class="bg-success">{{session('user_updated')}}</p>
+    @endif
+
+    @if(Session::has('user_deleted'))
+        <p class="bg-success">{{session('user_deleted')}}</p>
+    @endif
+
     <table class="table table-bordered">
       <thead>
         <tr>
