@@ -27,7 +27,8 @@ class PostsCreateRequest extends Request
             'title'=>'required|min:10',
             'body'=>'required|min:20',
             'category_id'=>'required',
-            'user_id'=>'required'
+            'photo_id'=>'required'
+            //'user_id'=>'required'
         ];
     }
 }

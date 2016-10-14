@@ -20,19 +20,19 @@
     </div>
 
     <div class="form-group">
+        {!! Form::label('category_id', 'Category:') !!}
+        {!! Form::select('category_id', ['0'=>'Choose A Category'] + $categories, null, ['class'=>'form-control']) !!}
+    </div>
+
+    <div class="form-group">
         {!! Form::label('photo_id', 'Photo:') !!}
         {!! Form::file('photo_id', ['class'=>'form-control']) !!}
     </div>
 
-    <div class="form-group">
-        {!! Form::label('category_id', 'Category:') !!}
-        {!! Form::select('category_id', array('0'=>'Choose An Option', '1'=>'PHP', '2'=>'Javascript'), null, ['class'=>'form-control']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('user_id', 'User:') !!}
-        {!! Form::select('user_id', array('0'=>'Choose An Option', '1'=>'edifalco'), null, ['class'=>'form-control']) !!}
-    </div>
+    {{--<div class="form-group">--}}
+        {{--{!! Form::label('user_id', 'User:') !!}--}}
+        {{--{!! Form::select('user_id', array('0'=>'Choose An User', '1'=>'edifalco'), null, ['class'=>'form-control']) !!}--}}
+    {{--</div>--}}
 
     {{--<div class="form-group">--}}
         {{--{!! Form::label('user_id', 'User_id:') !!}--}}
