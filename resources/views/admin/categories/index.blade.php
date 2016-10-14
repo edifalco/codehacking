@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>All Categories</h1>
+    <h1>Categories</h1>
 
     @if(Session::has('category_created'))
         <p class="bg-success">{{session('category_created')}}</p>

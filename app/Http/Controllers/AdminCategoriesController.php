@@ -77,8 +77,7 @@ class AdminCategoriesController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::findOrFail($id);
-        $input = $request->all();
-        $category->update($input);
+        $category->update($request->all());
         Session::flash('category_updated','The category has been updated.');
         return redirect('/admin/categories');
     }
