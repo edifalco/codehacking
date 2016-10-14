@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Posts</h1>
+    <h1>All Posts</h1>
 
     @if(Session::has('post_created'))
         <p class="bg-success">{{session('post_created')}}</p>
@@ -23,7 +23,7 @@
             <th>Photo</th>
             <th>Title</th>
             <th>Body</th>
-            <th>User</th>
+            <th>Owner</th>
             <th>Category</th>
             <th>Created</th>
             <th>Updated</th>
@@ -36,7 +36,7 @@
                     <td>{{$post->id}}</td>
                     <td><img width="60" src="{{$post->photo ? $post->photo->file : "/images/placeholder.jpg"}}"></td>
                     <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
-                    <td>{{$post->body}}</td>
+                    <td>{{str_limit($post->body, 50)}}</td>
                     <td>{{$post->user->name}}</td>
                     <td>{{$post->category ? $post->category->name : 'Not categorized' }}</td>
                     <td>{{$post->created_at->diffForHumans()}}</td>

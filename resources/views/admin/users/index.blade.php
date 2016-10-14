@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Users</h1>
+    <h1>All Users</h1>
 
     @if(Session::has('user_created'))
         <p class="bg-success">{{session('user_created')}}</p>
