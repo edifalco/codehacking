@@ -36,7 +36,7 @@
             @foreach($posts as $post)
                 <tr>
                     <td>{{$post->id}}</td>
-                    <td><img width="60" src="{{$post->photo ? $post->photo->file : "/images/placeholder.jpg"}}"></td>
+                    <td><img width="150" src="{{$post->photo ? $post->photo->file : "/images/placeholder.jpg"}}"></td>
                     <td><a href="{{route('home.post', $post->slug)}}" target="_blank">{{$post->title}}</a></td>
                     <td>{{str_limit($post->body, 50)}}</td>
                     <td>{{$post->user->name}}</td>
@@ -50,5 +50,11 @@
         @endif
         </tbody>
     </table>
+
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+            {{$posts->render()}}
+        </div>
+    </div>
 
 @stop
