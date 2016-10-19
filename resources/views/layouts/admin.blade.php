@@ -24,7 +24,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-@yield('styles')
 
 </head>
 
@@ -148,6 +147,10 @@
                         <!-- /.nav-second-level -->
                     </li>
 
+                    <li>
+                        <a href="{{route('admin.comments.index')}}"><i class="fa fa-edit fa-fw"></i> Comments</a>
+                    </li>
+
 
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Categories<span class="fa arrow"></span></a>
@@ -181,11 +184,6 @@
                     </li>
 
 
-
-
-
-
-
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -201,9 +199,7 @@
                     <li>
                         <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
                     </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                    </li>
+
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
