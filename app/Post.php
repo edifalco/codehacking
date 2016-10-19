@@ -2,10 +2,30 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use Sluggable;
+    use SluggableScopeHelpers;
+
+    //protected $slugKeyName = 'alternate';
+
+    /**
+     * Sluggable configuration.
+     *
+     * @var array
+     */
+    public function sluggable() {
+        return [
+            'slug' => [
+                'source' => 'title',
+            ]
+        ];
+    }
+
     protected $fillable = [
         'user_id', 'category_id', 'photo_id', 'title', 'body'
     ];
