@@ -20,7 +20,7 @@
     <hr>
 
     <!-- Preview Image -->
-    <img class="img-responsive" src="{{$post->photo->file}}" alt="">
+    <img class="img-responsive" src="{{$post->photo->file}}" alt=""> // if I get an object not found error I can do an if statement here to check if there is an image in the db, other option will be to make that column nullable in the db.
 
     <hr>
 
